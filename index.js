@@ -27,24 +27,24 @@ const promptProject = portfolioData => {
     }
     console.log(`
   =================
-  Add a New Employee or Intern
+  Add a New Team Member
   =================
   `);
     return inquirer.prompt([
       {
         type: 'input',
         name: 'name',
-        message: 'Enter employee or intern name'
+        message: "Enter team member's name"
       },
       {
         type: 'input',
         name: 'id',
-        message: 'Enter your employee ID (required)',
+        message: "Enter team member's ID (required)",
         validate: idInput => {
             if (idInput) {
                 return true;
             } else {
-                console.log('please enter your employee ID!');
+                console.log("Team Member's ID is required");
                 return false;                
             }
         }
@@ -52,12 +52,12 @@ const promptProject = portfolioData => {
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address (required)',
+        message: "Enter team member's email address (required)",
         validate: emailInput => {
             if (emailInput) {
                 return true;
             } else {
-                console.log('please enter your email address');
+                console.log("Team Member's email is required");
                 return false;                
             }
         }
@@ -65,42 +65,37 @@ const promptProject = portfolioData => {
     {
         type: 'input',
         name: 'phone',
-        message: 'Enter your office phone number (required)',
+        message: "Enter team member's phone number (required)",
         validate: phoneInput => {
             if (phoneInput) {
                 return true;
             } else {
-                console.log('please enter your email address');
+                console.log("please enter team member's email address");
                 return false;                
             }
         }
     },
       {
         type: 'checkbox',
-        name: 'languages',
-        message: 'What did your position? (Check all that apply)',
+        name: 'position',
+        message: "What is the team member's position? (Check all that apply)",
         choices: ['Manager', 'Engineer', 'Intern']
-      },
-      {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your project. (Required)'
       },
       {
         type: 'confirm',
         name: 'feature',
-        message: 'Would you like to feature this project?',
+        message: 'Would you like to feature this team member?',
         default: false
       },
       {
         type: 'input',
         name: 'github',
-        message: 'What is your Github username? (required)',
+        message: "Enter team member's Github username? (required)",
         validate: nameInput => {
             if (nameInput) {
                 return true;
             } else {
-                console.log('please enter github!');
+                console.log("please enter team member's github!");
                 return false;                
             }
         }
@@ -108,7 +103,7 @@ const promptProject = portfolioData => {
       {
         type: 'confirm',
         name: 'confirmAddProject',
-        message: 'Would you like to enter another team member?',
+        message: 'Would you like to add another team member?',
         default: false
       }
     ])

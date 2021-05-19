@@ -15,19 +15,21 @@ const generateAbout = aboutText => {
 const generateProjects = projectsArr => {
   return `
     <section class="my-3" id="portfolio">
-      <h2 class="text-dark bg-primary p-2 display-inline-block">Work</h2>
+      <h2 class="text-dark bg-primary p-2 display-inline-block">Team Roster</h2>
       <div class="flex-row justify-space-between">
       ${projectsArr
         .filter(({ feature }) => feature)
-        .map(({ name, description, languages, link }) => {
+        .map(({ name, id, phone, position, email, github }) => {
           return `
           <div class="col-12 mb-2 bg-dark text-light p-3">
             <h3 class="portfolio-item-title text-light">${name}</h3>
-            <h5 class="portfolio-languages">
-              Built With:
-              ${languages.join(', ')}
-            </h5>
-            
+            <h4 class="portfolio-languages">
+             ${position.join(', ')}
+            </h4>
+            <p>ID: ${id}</p>
+            <p>${phone}</p>
+            <a target="_blank" href="mailto:${email}" class="mt-auto"><i class="fab mr-2"></i>${email}</a>
+            <a target="_blank" href="https://github.com/${github}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>${name}'s GitHub</a>
           </div>
         `;
         })
@@ -35,16 +37,17 @@ const generateProjects = projectsArr => {
 
       ${projectsArr
         .filter(({ feature }) => !feature)
-        .map(({ name, description, languages, link }) => {
+        .map(({ name, id, phone, position, email, github }) => {
           return `
           <div class="col-12 col-md-6 mb-2 bg-dark text-light p-3 flex-column">
             <h3 class="portfolio-item-title text-light">${name}</h3>
-            <h5 class="portfolio-languages">
-              Built With:
-              ${languages.join(', ')}
-            </h5>
-            <p>${description}</p>
-            <a href="${link}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>View Project on GitHub</a>
+            <h4 class="portfolio-languages">
+              ${position.join(', ')}
+            </h4>
+            <p>ID: ${id}</p>
+            <p>${phone}</p>
+            <a target="_blank" href="mailto:${email}"</i>${email}</a>
+            <a target="_blank" href="https://github.com/${github}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>${name}'s GitHub</a>
           </div>
         `;
         })
