@@ -28,8 +28,8 @@ const generateProjects = projectsArr => {
             </h4>
             <p>ID: ${id}</p>
             <p>${phone}</p>
-            <a target="_blank" href="mailto:${email}" class="mt-auto"><i class="fab mr-2"></i>${email}</a>
-            <a target="_blank" href="https://github.com/${github}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>${name}'s GitHub</a>
+            <a target='_blank' href='mailto:${email}' rel='EMAIL' class='mt-auto'><i class='fab mr-2'></i>${email}</a>
+            <a target='_blank' href='https://github.com/${github}' class='btn mt-auto'><i class='fab fa-github mr-2'></i>${name}'s GitHub</a>
           </div>
         `;
         })
@@ -46,8 +46,8 @@ const generateProjects = projectsArr => {
             </h4>
             <p>ID: ${id}</p>
             <p>${phone}</p>
-            <a target="_blank" href="mailto:${email}"</i>${email}</a>
-            <a target="_blank" href="https://github.com/${github}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>${name}'s GitHub</a>
+            <a target='_blank' href='mailto:${email}' rel='EMAIL' class='mt-auto'><i class='fab mr-2'></i>${email}</a>
+            <a target='_blank' href='https://github.com/${github}' class='btn mt-auto'><i class='fab fa-github mr-2'></i>${name}'s GitHub</a>
           </div>
         `;
         })

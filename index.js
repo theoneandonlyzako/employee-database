@@ -37,6 +37,12 @@ const promptProject = portfolioData => {
         message: "Enter team member's name"
       },
       {
+        type: 'checkbox',
+        name: 'position',
+        message: "What is the team member's position? (Check all that apply)",
+        choices: ['Manager', 'Engineer', 'Intern']
+      },
+      {
         type: 'input',
         name: 'id',
         message: "Enter team member's ID (required)",
@@ -50,6 +56,19 @@ const promptProject = portfolioData => {
         }
     },
     {
+      type: 'input',
+      name: 'phone',
+      message: "Enter team member's phone number (required)",
+      validate: phoneInput => {
+          if (phoneInput) {
+              return true;
+          } else {
+              console.log("please enter team member's email address");
+              return false;                
+          }
+      }
+  },
+    {
         type: 'input',
         name: 'email',
         message: "Enter team member's email address (required)",
@@ -62,31 +81,6 @@ const promptProject = portfolioData => {
             }
         }
     },
-    {
-        type: 'input',
-        name: 'phone',
-        message: "Enter team member's phone number (required)",
-        validate: phoneInput => {
-            if (phoneInput) {
-                return true;
-            } else {
-                console.log("please enter team member's email address");
-                return false;                
-            }
-        }
-    },
-      {
-        type: 'checkbox',
-        name: 'position',
-        message: "What is the team member's position? (Check all that apply)",
-        choices: ['Manager', 'Engineer', 'Intern']
-      },
-      {
-        type: 'confirm',
-        name: 'feature',
-        message: 'Would you like to feature this team member?',
-        default: false
-      },
       {
         type: 'input',
         name: 'github',

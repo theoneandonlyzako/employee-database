@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
       fs.writeFile('./dist/index.html', fileContent, err => {
@@ -12,14 +13,14 @@ const writeFile = fileContent => {
         // if everything went well, resolve the Promise and send the successful data to the `.then()` method
         resolve({
           ok: true,
-          message: 'File created!'
+          message: 'Index file created!'
         });
       });
     });
   };
 
   const copyFile = () => {
-      return new promise((resolve, reject) =>{
+      return new Promise((resolve, reject) =>{
         fs.copyFile('./src/style.css', './dist/style.css', err => {
             if (err) {
               reject(err);
@@ -28,7 +29,7 @@ const writeFile = fileContent => {
             // if everything went well, resolve the Promise and send the successful data to the `.then()` method
             resolve({
                 ok: true,
-                message: 'File created!'
+                message: 'CSS file created!'
               });
           });
       })
