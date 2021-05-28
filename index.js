@@ -40,7 +40,7 @@ const promptProject = portfolioData => {
         type: 'checkbox',
         name: 'position',
         message: "What is the team member's position? (Check all that apply)",
-        choices: ['Manager', 'Engineer', 'Intern']
+        choices: ['Employee', 'Manager', 'Engineer', 'Intern']
       },
       {
         type: 'input',
