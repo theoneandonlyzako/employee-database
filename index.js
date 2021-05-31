@@ -1,3 +1,4 @@
+//html template
 const generateHTML = require('./src/page-template');
 
 // team profiles

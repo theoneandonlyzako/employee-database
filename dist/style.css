@@ -1,0 +1,61 @@
+:root {
+  --primary: #313131;
+  --secondary: #db6b0f;
+  --third: #535353;
+  --text: #ffffff;
+  --color: #db6b0f;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+}
+h3 {
+  font-size: 1em;
+  font-style: italic;
+}
+
+a, li {
+  color: var(--text);
+}
+
+.list-group-item {
+  background-color: var(--secondary);
+}
+
+.jumbotron {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--secondary);
+  min-width: 30%;
+  font-weight: 400;
+  margin: 0.5em;
+  border: 1px solid var(--secondary);
+  box-shadow: 3px 3px 10px;
+}
+
+.card-header {
+  text-align: right;
+  background-color: var(--secondary);
+}
+
+.card-body {
+  font-size: 0.8em;
+}
