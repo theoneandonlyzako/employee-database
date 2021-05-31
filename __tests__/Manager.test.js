@@ -1,3 +1,4 @@
+
 const Manager = require("../lib/Manager");
 
 test("Can set office number via constructor argument", () => {
