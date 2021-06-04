@@ -3,7 +3,7 @@
   <br/>
   Repo Link: https://github.com/theoneandonlyzako
   </br>
-  Demo Video Link: https://drive.google.com/file/d/18tPWJEpX4X26vMx_8kjz9fNaQSYb3vRs/view?usp=sharing
+  Demo Video Link: https://youtu.be/lxJznY5tTYs
   <br/></br>
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
